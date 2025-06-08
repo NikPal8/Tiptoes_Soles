@@ -4,18 +4,21 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
 }
 
-/* #pageContent header, main, footer {
-    height: 200px;
-    flex-basis: 400px;
-}
-#pageContent main {
-    height: 300px;
-    flex-basis: 800px;
-} */
+ul {
+    margin: 0;
+    padding: 0;
+    /* text-decoration: none; */
+    /* text-decoration: none; */
 
+    li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+    }
+}
 
 
 /* <!-- header Start --> */
@@ -23,8 +26,35 @@ header {
     background-color: grey;
     height: 200px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
    
+header ul {
+    background-color: white;
+    height: 50%;
+    /* width: 200px; */
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+
+#logoContainer {
+    background-color: red;
+    height: 100%;
+    width: 10%;
+}
+#searchBarContainer {
+    background-color: green;
+    width: 90%;
+}
+#menuContainer {
+    background-color: yellow;
+    width: 90%;
+
+}
+
 /* <!-- header End --> */
 
 

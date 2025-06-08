@@ -1,0 +1,83 @@
+#pageContent {
+    background-color: red;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+/* #pageContent header, main, footer {
+    height: 200px;
+    flex-basis: 400px;
+}
+#pageContent main {
+    height: 300px;
+    flex-basis: 800px;
+} */
+
+
+
+/* <!-- header Start --> */
+header {
+    background-color: grey;
+    height: 200px;
+    width: 100%;
+}
+   
+/* <!-- header End --> */
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- main Start --> */
+main {
+    background-color: blue;
+    height: 900px;
+    width: 100%;
+}
+  
+/* <!-- main End --> */
+
+
+
+
+
+
+
+
+
+
+    
+/* <!-- footer Start --> */
+footer {
+    background-color: grey;
+    height: 200px;
+    width: 100%;
+}
+/* <!-- footer End --> */
+
+
+
+
+/* Screen sizes greater than 1000px height will not have scrolling (display all elements) on the screen */
+@media (min-height: 1000px) {
+    header {
+        height: 20%;
+    }
+
+    main {
+        height: 80%;
+    }
+
+    header {
+        height: 20%;
+    }
+}

@@ -1,11 +1,8 @@
-#pageContent {
-    background-color: red;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+/* -----Removes ul/li Default settings---- */
 ul {
     margin: 0;
     padding: 0;
@@ -16,9 +13,30 @@ ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-
+            
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 }
+
+/* ----This is a Div parent to all other elements--- */
+#pageContent {
+    background-color: red;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+
+
+
+
+
+
 
 
 /* <!-- header Start --> */
@@ -39,20 +57,55 @@ header ul {
     border: 2px solid black;
 }
 
-
+/*  */
 #logoContainer {
     background-color: red;
     height: 100%;
-    width: 10%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        /* flex-basis: 100%; */
+        /* height: 180px; */
+        width: 90%;
+        max-width: 250px;
+       
+        /* max-width: 180px; */
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
 }
+   
+
+
+#menuContainer {
+    background-color: orange;
+    height: 70%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    
+
+}
+
 #searchBarContainer {
     background-color: green;
-    width: 90%;
+    height: 30%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#menuContainer {
-    background-color: yellow;
-    width: 90%;
 
+
+#productSearch {
+    height: 50%;
+    width: 50%;
 }
 
 /* <!-- header End --> */
@@ -91,7 +144,39 @@ footer {
     background-color: grey;
     height: 200px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+
+#navLinks {
+    background-color: red;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#navLinks li{
+    height: 50%;
+    width: 25%;
+    text-align: center;
+    align-content: center;
+    flex-basis: 25%;
+    font-size: 2rem;
+    font-weight: bold;
+    
+        
+    a {
+        color: white;
+    }
+
+}
+
+
+
 /* <!-- footer End --> */
 
 
@@ -111,3 +196,31 @@ footer {
         height: 20%;
     }
 }
+
+@media (max-width: 1800px) {
+
+    #logoContainer {
+        /* min-width: 150px; */
+        /* min-width: 25%; */
+       img {
+        max-width: 200px;
+       }
+    }
+
+
+    /* #menuContainer {
+        width: 85%;
+  
+        min-width: 300px;
+
+    }
+    #searchBarContainer {
+        width: 85%;
+         flex-shrink: 10;
+        min-width: 300px;
+
+    } */
+
+ 
+}
+

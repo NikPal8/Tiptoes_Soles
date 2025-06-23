@@ -1,7 +1,15 @@
 body {
-    margin: 0;
+    /* margin: 0; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+/* Contains all web page elements*/
+#pageContent {
+    background-color: grey;
+    height: 100vh;
+    font-size: 1em;
+}
+
 /* -----Removes ul/li Default settings---- */
 ul {
     margin: 0;
@@ -20,98 +28,58 @@ ul {
     }
 }
 
-/* ----This is a Div parent to all other elements--- */
-#pageContent {
-    background-color: red;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-}
 
-
-
-
-
-
-
-
-
-/* <!-- header Start --> */
+/* <!-- Header Start --> */
 header {
-    background-color: grey;
-    background-color: rgb(56, 56, 56);
+    background-color: red;
     height: 200px;
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-}
-   
-header ul {
-    background-color: white;
-    height: 50%;
-    /* width: 200px; */
+    border-bottom: 5px solid rgb(255, 200, 0);
     box-sizing: border-box;
-    border: 2px solid black;
 }
 
-/*  */
 #logoContainer {
     background-color: red;
-    background-color: rgb(56, 56, 56);
     height: 100%;
-    width: 15%;
+    width: 20%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    
+    flex-direction: column;
+
     img {
-        /* flex-basis: 100%; */
-        /* height: 180px; */
         width: 90%;
-        max-width: 250px;
-       
-        /* max-width: 180px; */
-        flex-grow: 0;
-        flex-shrink: 1;
+        max-width: 200px;
+        
     }
 }
-   
 
+#searchContainer {
+    background-color: green;
+    height: 30%;
+    width: 80%;
+}
 
 #menuContainer {
     background-color: orange;
-    background-color: rgb(56, 56, 56);
     height: 70%;
     width: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 2rem;
-    
 }
-
-#searchBarContainer {
-    background-color: green;
-    background-color: rgb(56, 56, 56);
-    height: 30%;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* <!-- Header End --> */
 
 
-#productSearch {
-    height: 50%;
-    width: 50%;
-}
 
-/* <!-- header End --> */
+
+
+
+/* <!-- Main Start --> */
+/* <!-- Main End --> */
+
+/* <!-- Footer Start --> */
+/* <!-- Footer End --> */
 
 
 
@@ -119,145 +87,33 @@ header ul {
 
 
 
-
-
-
-
-/* <!-- main Start --> */
-main {
-    background-color: blue;
-    height: 900px;
-    width: 100%;
-}
-  
-/* <!-- main End --> */
-
-
-
-
-
-
-
-
-
-
-    
-/* <!-- footer Start --> */
-footer {
-    background-color: grey;
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-
-#navLinks {
-    background-color: red;
-    height: 100%;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-
-#navLinks li{
-    height: 50%;
-    width: 25%;
-    text-align: center;
-    align-content: center;
-    flex-basis: 25%;
-    font-size: 2rem;
-    font-weight: bold;
-    
-        
-    a {
-        color: white;
-    }
-
-}
-
-
-
-/* <!-- footer End --> */
-
-
-
-
-/* Screen sizes greater than 1000px height will not have scrolling (display all elements) on the screen */
-@media (min-height: 1000px) {
-    header {
-        height: 20%;
-    }
-
-    main {
-        height: 80%;
-    }
-
-    header {
-        height: 20%;
-    }
-}
-
-@media (max-width: 1800px) {
-
-    /* #logoContainer {
-       img {
-        max-width: 200px;
-       }
-    } */
-
-    /* #menuContainer {
-        font-size: 1.5rem;
-    }
-    #navLinks li {
-        font-size: 1.5rem;
-    } */
-
-
- 
-}
-
-
+/* The maximum it can be 500px for the below to be active  */
 @media (max-width: 500px){
 
     header {
-        flex-wrap: nowrap;
+        flex-direction: row;
     }
+    
     #logoContainer {
-        height: 80%;
+        height: 60%;
         width: 20%;
+       
     }
 
     #menuContainer {
-        height: 20%;
+        height: 40%;
         width: 100%;
-        font-size: 1rem;
+    
     }
 
-    #searchBarContainer {
-        height: 80%;
+    #searchContainer {
+        height: 60%;
         width: 80%;
     }
-
-/*  
-
-    #menuContainer {
-        font-size: 1rem;
+    /* page content div font size is set to 1em, and all other will use various em sizes, as they adjust based on the parennt element. This is to make only 1 change to reduce the font size as they are all relative to the parent element. */
+    #pageContent {
+        font-size: 0.75em;
     }
 
-    #navLinks {
-        flex-direction: column;
-        flex-wrap:nowrap ;
-    }
-    #navLinks li {
-        height: 10%;
-        width: 100%;
-        font-size: 1rem;
-    }
 
-    #navLinks li:hover {
-        background-color: grey;
-    } */
 }

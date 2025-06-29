@@ -7,6 +7,8 @@ body {
 #pageContent {
     background-color: grey;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-size: 1em;
 }
 
@@ -30,29 +32,36 @@ ul {
 
 
 /* <!-- Header Start --> */
+/* I removed align-items center, due to removing logocontainer width. It affects the spacing between it's siblings  */
 header {
     background-color: red;
     height: 200px;
+    min-height: 200px;
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     border-bottom: 5px solid rgb(255, 200, 0);
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* align-items: center; */
+    
 }
-
+/* I removed width becuase flex wrap added too much space between it's siblings, when the page is maginified. It will fit the content if I don't state the width */
 #logoContainer {
-    background-color: red;
+    background-color: orchid;
     height: 100%;
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    /* max-width: 250px; */
+    
     img {
         width: 90%;
         max-width: 200px;
+        max-height: 200px;
+        
         
     }
 }
@@ -100,6 +109,12 @@ header {
 
 
 /* <!-- Main Start --> */
+main {
+    background-color: rosybrown;
+    height: 800px;
+    width: 100%;
+    flex-grow: 2;
+}
 /* <!-- Main End --> */
 
 
@@ -182,3 +197,10 @@ footer #navLinks li {
         font-size: 0.75em;
     }
 }
+
+/* @media (max-width: 1050px){
+    
+    #logoContainer img {
+        width: 60%;
+    }
+} */

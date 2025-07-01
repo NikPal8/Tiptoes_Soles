@@ -1,11 +1,12 @@
 body {
-    /* margin: 0; */
+    margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Contains all web page elements*/
 #pageContent {
-    background-color: grey;
+    /* background-color: grey; */
+    background-color: rgb(30, 30, 30);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,8 @@ ul {
 /* <!-- Header Start --> */
 /* I removed align-items center, due to removing logocontainer width. It affects the spacing between it's siblings  */
 header {
-    background-color: red;
+    /* background-color: red; */
+    background-color: rgb(30, 30, 30);
     height: 150px;
     min-height: 150px;
     width: 100%;
@@ -48,7 +50,8 @@ header {
 }
 /* I removed width becuase flex wrap added too much space between it's siblings, when the page is maginified. It will fit the content if I don't state the width */
 #logoContainer {
-    background-color: orchid;
+    /* background-color: orchid; */
+    background-color: rgb(30, 30, 30);
     height: 100%;
     width: 15%;
     display: flex;
@@ -56,18 +59,22 @@ header {
     align-items: center;
     flex-direction: column;
     /* max-width: 250px; */
-    
     img {
         width: 90%;
         max-width: 150px;
-        max-height: 150px;
-        
-        
+        max-height: 150px; 
     }
 }
+/* Company logo styling */
+#logoContainer img:hover {
+    border-radius: 50%;
+    box-shadow: #ffCC00 0px 0px 20px;
+}
+
 
 #searchContainer {
-    background-color: green;
+    /* background-color: green; */
+    background-color: rgb(30, 30, 30);
     height: 40%;
     width: 85%;
     display: flex;
@@ -78,7 +85,7 @@ header {
 /* Input text box - height does not change due to rem */
 #searchContainer #search {
     /* height: 50%; */
-    /* font-size: 1.25rem; */
+    font-size: 1.25rem;
     width: 50%;
 }
 
@@ -94,13 +101,41 @@ header {
     /* font-size: 1.5em; */
 }
 
+
 #menu {
-    background-color: slateblue;
+    /* background-color: slateblue; */
+    height: 100%;
+    background-color: rgb(30, 30, 30);
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
+/* li anchor tags hover font increase */
+#menu li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    /* transition:  0.9s ease-out; */
+    
+}
+#menu li a {
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#menu li a:hover {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    text-shadow:#FC0 1px 0 10px;
+}
+
+/* Hover effect on anchor tags */
+
+
 /* <!-- Header End --> */
 
 
@@ -110,7 +145,8 @@ header {
 
 /* <!-- Main Start --> */
 main {
-    background-color: rosybrown;
+    /* background-color: rosybrown; */
+    background-color: white;
     /* height: 800px; */
     width: 100%;
     display: flex;
@@ -122,14 +158,18 @@ main {
 
 /* Products Page Start */
 aside {
-    background-color: aqua;
+    /* background-color: aqua; */
+    /* background-color: rgb(30, 30, 30); */
+    background-color: white;
     height: 100%;
     width: 10%;
 }
 
 /* ul */
 #productsList {
-    background-color: brown;
+    /* background-color: brown; */
+    /*background-color: rgb(30, 30, 30);*/
+    background-color: white;
     height: 100%;
     width: 80%;
     display: grid;
@@ -138,7 +178,7 @@ aside {
    
 }
 
-#productsList li {
+#productsList .product {
     background-color: pink;
     height: 400px;
     width: 300px;
@@ -157,7 +197,8 @@ aside {
 
 /* <!-- Footer Start --> */
 footer {
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: rgb(30, 30, 30);
     height: 450px;
     min-height: 450px;
     width: 100%;
@@ -168,7 +209,8 @@ footer {
 }
 
 footer #navLinks {
-    background-color: red;
+    /* background-color: red; */
+    background-color: rgb(30, 30, 30);
     height: 100%;
     width: 80%;
     display: flex;
@@ -177,7 +219,8 @@ footer #navLinks {
 }
 
 footer #navLinks li {
-    background-color: red;
+    /* background-color: red; */
+    background-color: rgb(30, 30, 30);
     /* height: 100%; */
     width: 25%;
     display: flex;
@@ -190,9 +233,12 @@ footer #navLinks li {
 
 
 @media (max-width: 650px){
-        #pageContent {
+    #pageContent {
         font-size: 1.25em;
     }
+    /*-----------------*/
+    /*   Header Start  */
+    /*-----------------*/
     #logoContainer {
         width:20%;
     }
@@ -204,11 +250,38 @@ footer #navLinks li {
     #menuContainer {
         width:80%;
     }
+    /*-----------------*/
+    /*    Header End   */
+    /*-----------------*/
+
+
+    /*-----------------*/
+    /*    Main Start   */
+    /*-----------------*/
+    /* Ul li within Main */
+    #productsList .product{
+        height: 300px;
+        width: 90%;
+        margin: auto;
+    }
+    /*-----------------*/
+    /*     Main End    */
+    /*-----------------*/
+
+    /*-----------------*/
+    /*   Footer Start  */
+    /*-----------------*/
+
+    /*-----------------*/
+    /*   Footer End  */
+    /*-----------------*/
 }
 
 /* The maximum it can be 500px for the below to be active  */
 @media (max-width: 500px){
-    /* Header Start */
+    /*-----------------*/
+    /*    Header Start   */
+    /*-----------------*/
     header {
         flex-direction: row;
     }
@@ -229,21 +302,18 @@ footer #navLinks li {
         height: 60%;
         width: 80%;
     }
-    /* Header End */
+    /*-----------------*/
+    /*    Header End   */
+    /*-----------------*/
 
     /* page content div font size is set to 1em, and all other will use various em sizes, as they adjust based on the parennt element. This is to make only 1 change to reduce the font size as they are all relative to the parent element. */
     #pageContent {
         font-size: 1em;
     }
 
-    footer #navLinks {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }
-}
-
-@media (max-width: 500px){
+    /*-----------------*/
+    /*    Main Start   */
+    /*-----------------*/
     main {
         flex-direction: column;
         justify-content: space-between;
@@ -261,14 +331,34 @@ footer #navLinks li {
         row-gap: 10px;
     }
 
-    #productList li {
-        height: 300px;
+    #productsList .product {
+        height: 200px;
         width: 95%;
         /* margin: auto; */
     
     }
+    /*-----------------*/
+    /*     Main End    */
+    /*-----------------*/
 
+    /*-----------------*/
+    /*   Footer Start  */
+    /*-----------------*/
+
+    footer #navLinks {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    /*-----------------*/
+    /*   Footer End  */
+    /*-----------------*/
 }
+
+
+
+
+/* Footer Media Queries */
 
 /* @media (max-width: 1050px){
     
@@ -281,3 +371,16 @@ footer #navLinks li {
     max-width: 2000px;
     margin: auto;
 } */
+
+
+#productsList li {
+    /* background-color: transparent; */
+    display: flex;
+    flex-direction: column;
+}
+/* Products Page */
+.shoeDetails {
+    background-color: seagreen;
+    height: 90%;
+    width: 95%;
+}

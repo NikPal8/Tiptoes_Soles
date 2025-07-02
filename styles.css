@@ -2,8 +2,10 @@ body {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-/* Contains all web page elements*/
+/**********************************************************
+ * pageContent = div
+ * Contains all web page elements
+ **********************************************************/
 #pageContent {
     /* background-color: grey; */
     background-color: rgb(30, 30, 30);
@@ -13,7 +15,9 @@ body {
     font-size: 1.5em;
 }
 
-/* -----Removes ul/li Default settings---- */
+/**********************************************************
+* NOTE: Removes ul/li Default settings
+ **********************************************************/
 ul {
     margin: 0;
     padding: 0;
@@ -32,8 +36,10 @@ ul {
 }
 
 
-/* <!-- Header Start --> */
-/* I removed align-items center, due to removing logocontainer width. It affects the spacing between it's siblings  */
+/* ============== HEADER START ================= */
+/**********************************************************
+ * NOTE: I removed align-items center, due to removing logocontainer width. It affects the spacing between it's siblings.
+ **********************************************************/
 header {
     /* background-color: red; */
     background-color: rgb(30, 30, 30);
@@ -48,7 +54,11 @@ header {
     /* align-items: center; */
     
 }
-/* I removed width becuase flex wrap added too much space between it's siblings, when the page is maginified. It will fit the content if I don't state the width */
+
+/**********************************************************
+ * logoContainer = Div - contains img (logo)
+ * NOTE: I removed width becuase flex wrap added too much space between it's siblings, when the page is maginified. It will fit the content if I don't state the width
+ **********************************************************/
 #logoContainer {
     /* background-color: orchid; */
     background-color: rgb(30, 30, 30);
@@ -66,12 +76,18 @@ header {
     }
 }
 /* Company logo styling */
+/**********************************************************
+* HEADER effects
+* NOTE: Company logo img styling 
+ **********************************************************/
 #logoContainer img:hover {
     border-radius: 50%;
     box-shadow: #ffCC00 0px 0px 20px;
 }
 
-
+/**********************************************************
+* searchContainer = nav - contains search bar, buttons (login,cart)
+ **********************************************************/
 #searchContainer {
     /* background-color: green; */
     background-color: rgb(30, 30, 30);
@@ -82,17 +98,27 @@ header {
     align-items: center;
 }
 
-/* Input text box - height does not change due to rem */
+
+/**********************************************************
+* #search = input text box - inside #searchContainer(nav) within Header
+* NOTE: Input text box - height is commented out and is dictated by font size
+ **********************************************************/
 #searchContainer #search {
     /* height: 50%; */
     font-size: 1.25rem;
     width: 50%;
 }
 
+/**********************************************************
+* .userAccount = button - inside #searchContainer(nav) within Header
+ **********************************************************/
 #searchContainer button {
     font-size: 1.25rem;
 }
 
+/**********************************************************
+* #menuContainer = nav - contains ul(#menu), li, anchor tags (Products, Services, Contact, About)
+ **********************************************************/
 #menuContainer {
     background-color: orange;
     height: 60%;
@@ -101,7 +127,9 @@ header {
     /* font-size: 1.5em; */
 }
 
-
+/**********************************************************
+* #menu = ul - inside of nav(menuContainer) inside of Header
+ **********************************************************/
 #menu {
     /* background-color: slateblue; */
     height: 100%;
@@ -112,90 +140,57 @@ header {
     align-items: center;
 }
 
+/**********************************************************
+* li - parent: ul(#menu) grand parent: nav(menuContainer)
+ **********************************************************/
 /* li anchor tags hover font increase */
 #menu li {
     width: 25%;
     display: flex;
     justify-content: center;
-    /* transition:  0.9s ease-out; */
     
 }
+/**********************************************************
+* a - parent: li > ul(#menu) > nav(menuContainer) > Header
+ **********************************************************/
 #menu li a {
     font-size: 1em;
     transition: all 0.3s ease-in-out;
 
 }
-
+/**********************************************************
+* a - parent: li > ul(#menu) > nav(menuContainer) > Header
+* NOTE: Hover effect
+ **********************************************************/
 #menu li a:hover {
     font-size: 1.25em;
     font-weight: bold;
     color: white;
     text-shadow:#FC0 1px 0 10px;
 }
-
-/* Hover effect on anchor tags */
-
-
-/* <!-- Header End --> */
+/* ============== HEADER END ================= */
 
 
 
 
 
 
-/* <!-- Main Start --> */
-main {
-    /* background-color: rosybrown; */
-    background-color: white;
-    /* height: 800px; */
-    width: 100%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    flex-grow: 2;
-    padding-top: 20px;
-}
 
-/* Products Page Start */
-aside {
-    /* background-color: aqua; */
-    /* background-color: rgb(30, 30, 30); */
-    background-color: white;
-    height: 100%;
-    width: 10%;
-}
+/* ============== MAIN START ================= */
 
-/* ul */
-#productsList {
-    /* background-color: brown; */
-    /*background-color: rgb(30, 30, 30);*/
-    background-color: white;
-    height: 100%;
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-   
-}
+/**********************************************************
+* NOTE: Each Web page will have an additional style sheet for this section
+ **********************************************************/
 
-#productsList .product {
-    background-color: pink;
-    height: 400px;
-    width: 300px;
-    border: 2px solid black;
-    box-sizing: border-box;
-    margin: auto;
-    
-   
-}
-
-
-/* Products Page End */
-/* <!-- Main End --> */
+/* ============== MAIN END ================= */
 
 
 
-/* <!-- Footer Start --> */
+
+
+
+/* ============== FOOTER START ================= */
+
 footer {
     /* background-color: blue; */
     background-color: rgb(30, 30, 30);
@@ -208,6 +203,9 @@ footer {
 
 }
 
+/**********************************************************
+* #navLinks = ul - parent: Footer 
+ **********************************************************/
 footer #navLinks {
     /* background-color: red; */
     background-color: rgb(30, 30, 30);
@@ -218,6 +216,9 @@ footer #navLinks {
     flex-wrap: wrap;
 }
 
+/**********************************************************
+* li - parent: ul(#navLinks) > Footer
+ **********************************************************/
 footer #navLinks li {
     /* background-color: red; */
     background-color: rgb(30, 30, 30);
@@ -228,60 +229,52 @@ footer #navLinks li {
     align-items: center;
     
 }
-/* <!-- Footer End --> */
+/* ============== FOOTER END ================= */
 
 
+/* ============== MEDIA QUERIES START ================= */
 
 @media (max-width: 650px){
     #pageContent {
         font-size: 1.25em;
     }
-    /*-----------------*/
-    /*   Header Start  */
-    /*-----------------*/
+
+    /* ===== Header START ===== */
+    /* #logoContainer = div - parent: Header */
     #logoContainer {
         width:20%;
     }
-
+    /* #searchContainer = nav - parent: Header */
     #searchContainer {
         width:80%;
     }
-
+    /* #searchContainer = nav - parent: Header */
     #menuContainer {
         width:80%;
     }
-    /*-----------------*/
-    /*    Header End   */
-    /*-----------------*/
+    /* ===== HEADER END ===== */
 
 
-    /*-----------------*/
-    /*    Main Start   */
-    /*-----------------*/
-    /* Ul li within Main */
-    #productsList .product{
-        height: 300px;
-        width: 90%;
-        margin: auto;
-    }
-    /*-----------------*/
-    /*     Main End    */
-    /*-----------------*/
+   
+    /* ===== MAIN START ===== */
+    /**********************************************************
+    * NOTE: Each Web page will have an additional style sheet for this section
+    **********************************************************/
+    /* ===== MAIN END ===== */
 
-    /*-----------------*/
-    /*   Footer Start  */
-    /*-----------------*/
 
-    /*-----------------*/
-    /*   Footer End  */
-    /*-----------------*/
+
+    /* ===== FOOTER START ===== */
+    /* ===== FOOTER END ===== */
+
 }
 
-/* The maximum it can be 500px for the below to be active  */
+
+/**********************************************************
+* NOTE: The maximum it can be 500px for the below to be active 
+ **********************************************************/
 @media (max-width: 500px){
-    /*-----------------*/
-    /*    Header Start   */
-    /*-----------------*/
+    /* ===== HEADER START ===== */
     header {
         flex-direction: row;
     }
@@ -302,59 +295,33 @@ footer #navLinks li {
         height: 60%;
         width: 80%;
     }
-    /*-----------------*/
-    /*    Header End   */
-    /*-----------------*/
+    /* ===== HEADER END ===== */
 
     /* page content div font size is set to 1em, and all other will use various em sizes, as they adjust based on the parennt element. This is to make only 1 change to reduce the font size as they are all relative to the parent element. */
     #pageContent {
         font-size: 1em;
     }
 
-    /*-----------------*/
-    /*    Main Start   */
-    /*-----------------*/
-    main {
-        flex-direction: column;
-        justify-content: space-between;
-        padding-top: 0;
-    
-    }
-    aside {
-        /* padding top prevents overlap between the last li and the shifted aside */
-        width: 100%;
-        padding-top: 60px;
-    }
-    #productsList {
-        width: 90%;
-        gap: 0;
-        row-gap: 10px;
-    }
 
-    #productsList .product {
-        height: 200px;
-        width: 95%;
-        /* margin: auto; */
-    
-    }
-    /*-----------------*/
-    /*     Main End    */
-    /*-----------------*/
+    /* ===== MAIN START ===== */
+    /**********************************************************
+    * NOTE: Each Web page will have an additional style sheet for this section
+    **********************************************************/
+    /* ===== MAIN END ===== */
 
-    /*-----------------*/
-    /*   Footer Start  */
-    /*-----------------*/
 
+
+   /* ===== FOOTER START ===== */
     footer #navLinks {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    /*-----------------*/
-    /*   Footer End  */
-    /*-----------------*/
+   /* ===== FOOTER END ===== */
+
 }
 
+/* ============== MEDIA QUERIES END ================= */
 
 
 
@@ -373,14 +340,3 @@ footer #navLinks li {
 } */
 
 
-#productsList li {
-    /* background-color: transparent; */
-    display: flex;
-    flex-direction: column;
-}
-/* Products Page */
-.shoeDetails {
-    background-color: seagreen;
-    height: 90%;
-    width: 95%;
-}

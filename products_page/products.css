@@ -1,3 +1,9 @@
+
+/* ============== MAIN START ================= */
+
+/**********************************************************
+* NOTE: 
+ **********************************************************/
 main {
     /* background-color: rosybrown; */
     background-color: white;
@@ -10,7 +16,10 @@ main {
     padding-top: 20px;
 }
 
-/* Products Page Start */
+/**********************************************************
+* aside - parent element: main
+* NOTE: to the left and right of ul
+ **********************************************************/
 aside {
     /* background-color: aqua; */
     /* background-color: rgb(30, 30, 30); */
@@ -20,6 +29,10 @@ aside {
 }
 
 /* ul */
+/**********************************************************
+* #productsList = ul - parent element main
+NOTE: Will hold the product card/details
+ **********************************************************/
 #productsList {
     /* background-color: brown; */
     /*background-color: rgb(30, 30, 30);*/
@@ -31,33 +44,93 @@ aside {
     gap: 20px;
    
 }
-
+/**********************************************************
+* .product = li - parent element: ul(#productsList) > main
+ **********************************************************/
 .product {
     background-color: pink;
     height: 400px;
     width: 300px;
     border: 2px solid black;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
+    box-shadow: 5px 2px 5px 1px grey ;
 }
 
-#productsList li {
-    /* background-color: transparent; */
+/**********************************************************
+* .shoeDetails = li - parent element: ul(#productsList) > main
+ **********************************************************/
+.shoeDetails {
+    background-color: seagreen;
+    height: 95%;
+    width: 95%;
     display: flex;
     flex-direction: column;
 }
-/* Products Page */
-.shoeDetails {
-    background-color: seagreen;
-    height: 90%;
-    width: 95%;
+/**********************************************************
+* li - parent element: ul(#shoeDetails) > li(.product) > ul(#productsList) > main
+* NOTE: First li - contains img
+ **********************************************************/
+.shoeDetails li:nth-of-type(1){
+    background-color: grey;
+    height: 50%;
+    width: 100%;
+    
 }
+
+#shoeImg {
+    width: 100%;
+    /* object-fit: cover; */
+
+
+}
+/**********************************************************
+* li - parent element: ul(#shoeDetails) > li(.product) > ul(#productsList) > main
+* NOTE: Second li - contains product name
+ **********************************************************/
+.shoeDetails li:nth-of-type(2){
+    background-color:brown;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+/**********************************************************
+* li - parent element: ul(#shoeDetails) > li(.product) > ul(#productsList) > main
+* NOTE: Third li - contains price and cart button
+ **********************************************************/
+.shoeDetails li:nth-of-type(3){
+    background-color: transparent;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#shoePrice {
+    background-color: yellow;
+}
+#shoeToCart {
+    font-size: 1em;
+}
+/* #
+h3{}
+
+#shoeToCart{} */
+/* ============== MAIN END ================= */
 
 /* ============== MEDIA QUERIES START ================= */
 @media (max-width: 650px){
     /* ===== MAIN START ===== */
-     /* #searchContainer = nav - parent: Header */
-     /* Ul li within Main */
+    /*.product = li - parent element: ul(#productsList) > main */
    .product{
         height: 300px;
         width: 90%;
@@ -66,9 +139,10 @@ aside {
     }
     /* ===== MAIN END ===== */
 }
+
 @media (max-width: 500px){
     /* ===== MAIN START ===== */
-        main {
+    main {
         flex-direction: column;
         justify-content: space-between;
         padding-top: 0;

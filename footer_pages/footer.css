@@ -1,0 +1,33 @@
+/* ============== MAIN START ================= */
+
+/**********************************************************
+* NOTE: 
+ **********************************************************/
+main {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-grow: 2;
+    padding-top: 20px;
+}
+
+/**********************************************************
+* aside - parent element: main
+* NOTE: to the left and right of ul
+ **********************************************************/
+#policyInfo {
+    background-color: white;
+    height: 100%;
+    width: 80%;
+}
+
+#policyPoints li{
+    list-style-type: disc;
+    margin-left: 2%;
+}
+/* Due to specificity, from above I had do select via parent otherwise I would need to give the other li's an id */
+#policyPoints #subHeading {
+    list-style-type: none;
+    margin-left: 0;
+}
+/* ============== MAIN END ================= */

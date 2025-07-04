@@ -181,7 +181,24 @@ header {
 /**********************************************************
 * NOTE: Each Web page will have an additional style sheet for this section
  **********************************************************/
+main {
+    /* background-color: rosybrown; */
+    background-color: white;
+    /* height: 800px; */
+    width: 100%;
+}
 
+/**********************************************************
+* aside - parent element: main
+* NOTE: to the left and right of ul
+ **********************************************************/
+aside {
+    /* background-color: aqua; */
+    /* background-color: rgb(30, 30, 30); */
+    background-color: white;
+    height: 100%;
+    width: 10%;
+}
 /* ============== MAIN END ================= */
 
 

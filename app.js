@@ -49,3 +49,4 @@ const shoes = [
 ];
 
 console.log(shoes[0].size[1]);// 7
+

@@ -105,16 +105,30 @@ header {
  **********************************************************/
 #searchContainer #search {
     /* height: 50%; */
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     width: 50%;
+}
+/**********************************************************
+* #userAccountButtons = div - inside #searchContainer(nav) within Header
+* NOTE: Input text box - height is commented out and is dictated by font size
+ **********************************************************/
+#userAccountButtons {
+    background-color: transparent;
+    /* height: 100%; */
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /**********************************************************
-* .userAccount = button - inside #searchContainer(nav) within Header
+* .userAccount = button - parent element: div(#userAccountButtons) inside #searchContainer(nav) within Header
  **********************************************************/
-#searchContainer button {
-    font-size: 1.25rem;
+#userAccountButtons button {
+    font-size: 1.5rem;
+    margin-left: calc(5%/ 2);
 }
+
+
 
 /**********************************************************
 * #menuContainer = nav - contains ul(#menu), li, anchor tags (Products, Services, Contact, About)

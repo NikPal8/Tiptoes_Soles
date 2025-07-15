@@ -50,3 +50,49 @@ const shoes = [
 
 console.log(shoes[0].size[1]);// 7
 
+
+const shoePages = [
+    `<aside></aside>
+
+                <div id="productPanel">
+
+                    <section class ="shoeItemDisplay">
+                        <ul class="shoeStats">
+                            <li>Gary Tan</li>
+                            <li><img src="../images/Gary_Tan.jpg" alt="Gary Tan Shoe"></li>
+                            <li class ="shoeItemPrice"><span id="shoePrice">$79.00</span></li>
+                            <li class ="shoeItemCart">
+                                <button>Add to Cart</button>
+                                <button id="favButton">
+                                    <span id="plus">+</span>
+                                    <span id="heartSymbol">&#9825</span>
+                                </button></li>
+                        </ul>
+                    </section>
+
+                    <section class = "shoeItemDetails">
+                        <!-- <p class ="shoeItemDescription">
+                            Look good, feel great in these comfort sneakers you won't want to take off. 
+                        </p> -->
+
+                        <ul class = "shoeItemFeatures">
+                            <li id="shoeParagraph">Look good, feel great in these comfort sneakers you won't want to take off.</li>
+                            <li>Soft leather uppers</li>
+                            <li>Breathable mesh lining</li>
+                            <li>Contoured footbed with additional heel padding</li>
+                            <li>Orthotic friendly</li>
+                        </ul>
+                        
+
+                        <ul class = "shoeItemMaterials">
+                            <li id="subHeading"><h2>Materials & Details:</h2></li>
+                            <li>Product Code: 30213</li>
+                            <li>Sole Material: Rubber</li>
+                            <li>Lining Material: Eco friendly</li>
+                            <li>Upper Material: Leather</li>
+                        </ul>
+                    </section>
+
+                </div>
+            <aside></aside>`
+];

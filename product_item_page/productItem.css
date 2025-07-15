@@ -1,22 +1,236 @@
 /* ============== MAIN START ================= */
 
 /**********************************************************
-* NOTE: 
+* NOTE: Height not specified and will fit content 
  **********************************************************/
 main {
-    background-color: red;
-    height: 100%;
+    /* background-color: red; */
+    /* height: 100%; */
     width: 100%;
     display: flex;
     align-items: center;
 }
 
 /**********************************************************
-* 
+* NOTE: 
  **********************************************************/
 #productPanel {
-    background-color: grey;
-    height: 90%;
+    /* background-color: grey; */
+    height: 700px;
     width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#productPanel ul {
+    /* background-color: grey; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ------------------------- */
+/* Section start */
+.shoeItemDisplay {
+    background-color: grey;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid rgb(30, 30, 30);
+    box-sizing: border-box; */
+}
+/* ul not specified */
+.shoeStats {
+    background-color: transparent;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* .shoeItemName */
+.shoeStats li:nth-of-type(1) {
+    background-color: transparent;
+    height: 10%;
+    width: 95%;
+    align-content: center;
+}
+/* .shoeItemImage */
+.shoeStats li:nth-of-type(2) {
+    background-color: transparent;
+    height: 70%;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+}
+.shoeStats li:nth-of-type(2) img {
+    width: 95%;
+}
+
+
+/* .shoeItemPrice */
+.shoeStats li:nth-of-type(3) {
+    background-color: transparent;
+    height: 10%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Price li */
+.shoeStats li:nth-of-type(3) #shoePrice {
+    background-color: #FC0;
+    height: 100%;
+    font-size: 2rem;
+    align-content: center;
+}
+
+/* Span id */
+
+/* .shoeItemCart */
+.shoeStats li:nth-of-type(4) {
+    background-color: transparent;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.shoeStats li:nth-of-type(4) button {
+    height: 100%;
+    width: 50%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoeStats li:nth-of-type(4) #favButton #plus{
+    height: 100%;
+    font-size: 1rem;
+}
+
+.shoeStats li:nth-of-type(4) #favButton #heartSymbol{
+    height: 100%;
+    font-size: 2.5rem;
+    padding: 0;
+    
+
+}
+
+.shoeStats li:nth-of-type(4) #favButton #plus{
+    font-size: 1rem;
+    display: flex;
+    
+}
+/**********************************************************
+* .shoeItemDetails = section > parent is div(#productPanel) > Main
+* NOTE:
+ **********************************************************/
+.shoeItemDetails {
+    background-color: grey;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgb(30, 30, 30);
+    box-sizing: border-box;
+}
+/**********************************************************
+* .shoeItemDescription = p > parent is section(.shoeItemDetails) > div(#productPanel) > Main
+* NOTE: Due to specificity, to make sure styling would work I had to be very specific
+* and I have tried the ID selector with ul it still has issues???
+ **********************************************************/
+#productPanel .shoeItemDetails p.shoeItemDescription {
+    background-color: transparent;
+    height: 40%;
+    width: 100%;
+    margin: 0;
+}
+
+/**********************************************************
+* .shoeItemFeatures = ul > parent is section(.shoeItemDetails) > div(#productPanel) > Main
+* NOTE: Due to specificity, to make sure styling would work I had to be very specific
+* and I have tried the ID selector with ul it still has issues???
+ **********************************************************/
+#productPanel .shoeItemDetails ul.shoeItemFeatures {
+    background-color: transparent;
+    height: 50%;
+    width: 100%;
+
+    
+}
+
+.shoeItemFeatures li {
+    /* background-color: rosybrown; */
+    width: 90%;
+    /* border: 2px solid black; */
+    list-style-type:disc;
+    margin-left : 10%;
+    font-size: 1.5rem;
+}
+
+#shoeParagraph {
+    margin-top: 5%;
+    list-style-type: none;
+    margin-left : 0;
+}
+/**********************************************************
+* .shoeItemMaterials = ul > parent is section(.shoeItemDetails) > div(#productPanel) > Main
+* NOTE: Due to specificity, to make sure styling would work I had to be very specific
+* and I have tried the ID selector with ul it still has issues???
+ **********************************************************/
+#productPanel .shoeItemDetails ul.shoeItemMaterials {
+    /* background-color: seagreen; */
+    height: 20%;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+.shoeItemMaterials li {
+    /* background-color: darkgrey; */
+    width: 90%;
+    /* border: 2px solid red; */
+    list-style-type: square;
+    margin-left : 10%;
+
+}
+
+.shoeItemMaterials #subHeading {
+    font-size: 1rem;
+    list-style-type: none;
+    margin: 0;
 }
 /* ============== MAIN END ================= */
+
+@media (max-width: 650px) {
+    #productPanel {
+        background-color: #FC0;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+        #productPanel li {
+        font-size: 1rem;
+    }
+    .shoeItemMaterials #subHeading {
+        font-size: 0.75rem;
+
+    }
+      .shoeItemMaterials #subHeading h2 {
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+@media (max-width: 500px) {
+
+}

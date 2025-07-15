@@ -5,7 +5,7 @@
  **********************************************************/
 main {
     background-color: white;
-    height: 900px;
+    height: 900000px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -16,7 +16,7 @@ main {
  **********************************************************/
 #productPanel {
     background-color: transparent;
-    height: 90%;
+    height: 90000000000px;
     width: 80%;
 }
 /* ============== MAIN END ================= */

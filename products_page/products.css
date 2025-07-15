@@ -63,13 +63,24 @@ NOTE: Will hold the product card/details
 /**********************************************************
 * .shoeDetails = li - parent element: ul(#productsList) > main
  **********************************************************/
-.shoeDetails {
+.product .shoeItemLink  {
     background-color: seagreen;
     height: 95%;
     width: 95%;
+   
+    
+}
+
+ .shoeDetails {
+    background-color: seagreen;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
+
+
+
 /**********************************************************
 * li - parent element: ul(#shoeDetails) > li(.product) > ul(#productsList) > main
 * NOTE: First li - contains img
@@ -121,6 +132,7 @@ NOTE: Will hold the product card/details
 #shoeToCart {
     font-size: 1em;
 }
+
 /* #
 h3{}
 

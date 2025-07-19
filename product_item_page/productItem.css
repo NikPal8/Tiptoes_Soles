@@ -21,7 +21,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1em;
+    font-size: 0.75em;
 }
 
 /* ul(.shoeStats)*/
@@ -66,9 +66,9 @@ main {
 }
 /* .shoeItemImage */
 .shoeStats li:nth-of-type(2) {
-    background-color: red;
+    /* background-color: red; */
     height: 70%;
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,8 +76,10 @@ main {
     box-sizing: border-box;
 }
 .shoeStats li:nth-of-type(2) img {
-    max-width: 95%;
-    object-fit:fill;
+    height: 90%;
+   
+    /* max-height: 390px; */
+
 }
 
 
@@ -175,7 +177,7 @@ main {
  **********************************************************/
 #productPanel .shoeItemDetails ul.shoeItemFeatures {
     background-color: transparent;
-    height: 50%;
+    height: 60%;
     width: 100%;
 
     
@@ -202,7 +204,7 @@ main {
  **********************************************************/
 #productPanel .shoeItemDetails ul.shoeItemMaterials {
     /* background-color: seagreen; */
-    height: 20%;
+    height: 40%;
     width: 100%;
     /* border: 2px solid red; */
 }
@@ -228,11 +230,36 @@ main {
 }
 
 #selectedShoeContent {
-    background-color: blue;
+    background-color: white;
     /* height: 700px;
     width: 900px; */
 }
 /* ============== MAIN END ================= */
+
+/* Just for the images on the shoe product Item pages */
+@media (max-width: 2100px) {
+    .shoeStats li:nth-of-type(2) img {
+        height: 70%;
+    }
+}
+@media (max-width: 1700px) {
+    .shoeStats li:nth-of-type(2) img {
+        height: 55%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .shoeStats li:nth-of-type(2) img {
+        height: 45%;
+    }
+}
+
+@media (max-width: 900px) {
+    .shoeStats li:nth-of-type(2) img {
+        height: 30%;
+    }
+}
+/* End of terrible code... */
 
 @media (max-width: 650px) {
     #productPanel {
@@ -246,19 +273,10 @@ main {
         width: 100%;
         border-left: none;
     }
-
-        /* #productPanel li {
-        font-size: 1rem;
+    .shoeStats li:nth-of-type(2) img {
+        height: 60%;
     }
-    .shoeItemMaterials #subHeading {
-        font-size: 0.75rem;
 
-    }
-      .shoeItemMaterials #subHeading h2 {
-        margin: 0;
-        padding: 0;
-
-    } */
 }
 
 @media (max-width: 500px) {
